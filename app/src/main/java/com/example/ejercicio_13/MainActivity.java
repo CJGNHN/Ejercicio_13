@@ -3,6 +3,7 @@ package com.example.ejercicio_13;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        conexion = new SQLiteConexion(this, Transacciones.NameDatabase, null, 1);
         Nombre = ( EditText) findViewById(R.id.IDNombre);
         Apellidos = ( EditText) findViewById(R.id.IDApellido);
         Edad = (EditText) findViewById(R.id.IDedad);
@@ -33,13 +35,34 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btnSalvar = (Button) findViewById(R.id.btnSalvarContacto);
+        Button btnLista = (Button) findViewById(R.id.btnListaPersonas);
+        Button btnConsulta = (Button) findViewById(R.id.btnConssultaPersonas);
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { AgregarPersonas();}
         });
 
+        btnLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListadoPersonas.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnConsulta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ModificarPersonas.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
 
     private void AgregarPersonas()
     {

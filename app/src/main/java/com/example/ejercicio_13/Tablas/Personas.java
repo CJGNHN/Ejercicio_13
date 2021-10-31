@@ -20,6 +20,10 @@ public class Personas {
 
     }
 
+    public Personas() {
+
+    }
+
     public Integer getId() {
         return Id;
     }

@@ -2,10 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnListaContacto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <Button
+        android:id="@+id/btnConssultaPersonas"
+        android:layout_width="191dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:text="Consultar Personas"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalvarContacto" />
+
+    <Button
+        android:id="@+id/btnListaPersonas"
+        android:layout_width="191dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="Lista Personas"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/btnSalvarContacto"
+        app:layout_constraintTop_toBottomOf="@+id/IDDireccion" />
 
     <EditText
         android:id="@+id/IDDireccion"
@@ -22,11 +46,11 @@
         android:id="@+id/textView5"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Direccion"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IDCorreo" />
 
@@ -68,7 +92,7 @@
         android:id="@+id/textView4"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Apellidos"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +104,7 @@
         android:id="@+id/textView2"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:text="Nombre"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,11 +128,11 @@
         android:id="@+id/textView3"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Edad"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IDApellido" />
 
@@ -128,10 +152,11 @@
         android:id="@+id/btnSalvarContacto"
         android:layout_width="191dp"
         android:layout_height="45dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Salvar"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IDDireccion" />
 
