@@ -10,7 +10,7 @@ public class Transacciones
     public static final String Nombres="Nombres";
     public static final String Apellidos="Apellidos";
     public static final String Edad="Edad";
-    public static final String Correo="Correos";
+    public static final String Correo="Correo";
     public static final String Direccion="Direccion";
 
     public static final String CreateTablePersonas = "CREATE TABLE Personas (id INTEGER PRIMARY KEY AUTOINCREMENT," + "Nombres TEXT, Apellidos TEXT, Edad TEXT, Correo TEXT, Direccion TEXT)";

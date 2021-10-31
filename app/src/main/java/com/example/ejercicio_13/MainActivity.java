@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = conexion.getWritableDatabase();
 
         ContentValues valores = new ContentValues();
-        valores.put(Transacciones.Nombres, Nombre.getTag().toString());
+        valores.put(Transacciones.Nombres, Nombre.getText().toString());
         valores.put(Transacciones.Apellidos, Apellidos.getText().toString());
         valores.put(Transacciones.Edad, Edad.getText().toString());
         valores.put(Transacciones.Correo, Correo.getText().toString());
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LimpiarPantalla()
     {
-        Nombre.setTag("");
+        Nombre.setText("");
         Apellidos.setText("");
         Edad.setText("");
         Correo.setText("");
